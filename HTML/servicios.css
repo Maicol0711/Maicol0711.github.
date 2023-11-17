@@ -1,0 +1,144 @@
+:root {
+    /* paleta de colores para la pagina*/
+    --color-de-banner : #776B5D;
+    --color-de-fondo2 : #B0A695;
+    --color-de-cuadro : #EBE3D5;
+    --color-de-fondo : #F3EEEA;
+    --color-de-letra: white;
+    --color-titulo-precio: #F5E8C7 ;
+}
+x{
+    padding: 0;
+    margin: 0;
+}
+
+body {    
+    background-color: var(--color-de-fondo);
+}
+
+/*  EMPIEZA CSS DEL HEADER */
+.banner{
+    background-color: var(--color-de-banner);
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 100% ;
+    height: 25%;
+
+    } 
+.menu{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.logo{
+    color: var(--color-de-letra);
+    display: block;
+    align-items: center;
+    padding: 1% 0% 3% 1%;
+    width: 100%;
+}
+.eslogan{
+    color: var(--color-de-letra);
+    margin: 0% 0% 0% 19%; 
+    
+}
+.nombre{
+    margin: 2% 0% 0% 15%;
+}
+a{
+    color: white;
+    text-decoration: none;
+}
+
+/*  EMPIEZA CSS DE BODY */
+.servicio{
+    color: var(--color-de-letra);
+    text-align: center;
+    margin: 2% 2% 2% 2%;
+    padding: 5%;
+    background-color: var(--color-de-fondo2);
+}
+
+.catalogo{
+    display: grid;
+    grid-template-columns: 33.3% 33.3% 33.3%;
+    grid-template-rows: 33.3% 33.3% 33.3%;
+    border-radius: 10px;
+}
+.productos{
+    margin: 5% 5% 5% 5%;
+    display: block;
+    background-color: var(--color-de-fondo2);
+    padding: 6%;
+}
+.img-de-producto{
+    width: 80%;
+    margin: 5% 5% 0% 5%;
+
+}
+
+.precio{
+    background-color: var(--color-titulo-precio);
+    margin: 2% 1.5% 2% 1.5%;
+    padding: 2%;
+    border-radius: 20px;
+    text-align: center;
+    margin-left:20%;
+    margin-right: 20%;
+    position: relative;
+
+
+}
+.titulo{
+    background-color: var(--color-titulo-precio);
+    padding: 4% 4% 4% 4%;
+    border-radius: 20px;
+    text-align: center;
+    margin-left:20%;
+    margin-right: 20%;
+}
+p{
+    margin: 0%;
+    padding: 0%;
+}
+
+/* EMPIEZA CSS DEL FOOTER */
+footer{
+    background-color: var(--color-de-banner);
+    display: flex;
+    justify-content: space-between;
+
+
+}
+.app{
+    width: 30%;
+}
+.redes{
+    display: flex;
+    justify-content: space-around;
+}
+.contactanos{
+    margin: 0% 0% 0.5% 0%;
+}
+
+.contactanos{
+    color: var(--color-de-letra);
+    text-align: center;
+    margin: 1% 0% 1% 0%;
+}
+.al{
+    width: 25%;
+    margin: 0% 0% 1% 13%;
+}
+
+.derechos-de-autor{
+    width: 50%;
+    margin: 10% 5% 5% 25%;
+    padding: 8%;
+}
+.aviso{
+    color: var(--color-de-letra);
+    display: block;
+    align-items: flex-start;
+    margin: 2% 5% 1% 3%;
+}
