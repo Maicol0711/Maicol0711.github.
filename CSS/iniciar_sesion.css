@@ -1,0 +1,66 @@
+:root {
+    /* paleta de colores para la pagina*/
+    --color-de-banner : #776B5D;
+    --color-de-fondo2 : #B0A695;
+    --color-de-cuadro : #EBE3D5;
+    --color-de-fondo : #F3EEEA;
+    --color-de-letra: white;
+    --color-de-contenedor: #E1C78F ;
+} 
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: var(--color-de-banner);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    background: var(--color-de-contenedor);
+    text-align: center;
+    padding: 10% 10% ;
+    border-radius: 20px;
+}
+
+form .title {
+    color: var(--color-de-letra);
+    font-size: 35px;
+    font-weight: 800;
+    margin-bottom: 30px;
+}
+
+form label {
+    margin-bottom: 35px;
+}
+
+form label input {
+    outline: none;
+    border: none;
+    color: #000;
+    border-bottom: solid 1px black;
+    padding: 0 5px;
+    font-size: 18px;
+    background-color: var(--color-de-contenedor);
+}
+
+form .link {
+    color: var(--color-de-letra);
+    margin-bottom: 15px;
+}
+
+form button {
+    color: white;
+    border: 0;
+    background: var(--color-de-banner) ;
+    padding: 10px 15px;
+    font-size: 20px;
+}

@@ -1,0 +1,56 @@
+:root {
+    /* paleta de colores para la pagina*/
+    --color-de-banner : #776B5D;
+    --color-de-fondo2 : #B0A695;
+    --color-de-cuadro : #EBE3D5;
+    --color-de-fondo : #F3EEEA;
+    --color-de-letra: white;
+}
+
+body {    
+    background-color: var(--color-de-fondo);
+}
+
+/*  EMPIEZA CSS DEL HEADER */
+.banner{
+    background-color: var(--color-de-banner);
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 100% ;
+    height: 25%;
+
+    } 
+.menu{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.logo{
+    color: var(--color-de-letra);
+    display: block;
+    align-items: center;
+    padding: 1% 0% 3% 1%;
+    width: 100%;
+}
+.eslogan{
+    color: var(--color-de-letra);
+    margin: 0% 0% 0% 19%;
+}
+.nombre{
+    margin: 2% 0% 0% 15%;
+}
+a{
+    color: white;
+    text-decoration: none;
+}
+
+/*  EMPIEZA CSS DE BODY */
+.reseña{
+    color: var(--color-de-letra);
+    text-align: center;
+    margin: 1.5% 1.5% 1.5% 1.5%;
+    padding: 3%;
+    background-color: var(--color-de-fondo2);
+    font-size: 200%;
+}
+
