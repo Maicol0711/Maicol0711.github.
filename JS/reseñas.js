@@ -12,26 +12,23 @@ function mostrarCredenciales () {
 
     const usuario = JSON.parse(usuarioLogueado)
     p.textContent = `Hola ${usuario.nombre}, correo: ${usuario.email}`
-    boton.addEventListener("click",  () => {
+    function infoVerificada () {
+      const a = document.createElement("a")
+      a.href = "./registrarse.html"
+      a.click()
       p.textContent = ""
       localStorage.removeItem("usuarioLogueado")
-      function infoVerificada (path) {
-        const a = document.createElement("a")
-        a.href = path
-        a.click()
-      }
-      infoVerificada ("./iniciar_sesion.html")
-    })
+    }
+    boton.addEventListener("click",  infoVerificada)
     info_usuario.appendChild(p)
     info_usuario.appendChild(boton)
   }
 }
 
+
+
+
 mostrarCredenciales()
 
 
-function infoVerificada (path) {
-  const a = document.createElement("a")
-  a.href = path
-  a.click()
-}
+

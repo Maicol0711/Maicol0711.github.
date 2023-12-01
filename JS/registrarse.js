@@ -16,7 +16,6 @@ function info_guardada (event) {
         const info = JSON.stringify(userData)
         console.log(info)
         localStorage.setItem(email, info)
-
         infoVerificada("./iniciar_sesion.html")
     } else {
         window.alert("faltan datos por llenar")
