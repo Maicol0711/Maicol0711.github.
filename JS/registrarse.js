@@ -18,6 +18,9 @@ function info_guardada (event) {
         localStorage.setItem(email, info)
 
         infoVerificada("./iniciar_sesion.html")
+    } else {
+        window.alert("faltan datos por llenar")
+        console.log("faltan datos")
     }
 }
 
