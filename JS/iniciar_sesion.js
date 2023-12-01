@@ -1,40 +1,54 @@
- const login_form = document.getElementById("#login_form");
+ const login_form = document.querySelector("#login_form");
 
- function inicio_sesion (event) {
+ function info_verificada (event){
     event.preventDefault()
     console.log(event)
-    const formData = new FormData(event.srcEelement)
-    const email = formData.get("email")
-    const password = formData.get("password")
+    const formData = new FormData(event.srcElement)
+    const email = formData.get('email')
+    const password = formData.get('password')
 
-    if ( email && password ) {
+    if (email && password) { 
         const userData = localStorage.getItem(email)
-
-        if (!userData) {
-            console.log("no hay datos")
+        if (!userData){
+            console.log("No hay datos")
             return
         }
         const data = JSON.parse(userData)
 
-        const sameEmail = email === data.email
-        const samePassword = password === data.password
+        console.log(data)
+        const emailVerificado = email === data.email
+        const passwordlVerificada = password === data.password
 
-        if (sameEmail && samePassword) {
+        if ( emailVerificado && passwordlVerificada){
             console.log("correcto")
-            const loggedUser = { ...data, login: true}
-            localStorage.setItem(email, JSON.stringify(loggedUser))
-            redirectTo("./reseñas.html")
+            const usuarioLogeado = {...data, login: true}
+            const info_string = JSON.stringify(usuarioLogeado)
+            localStorage.setItem(email, info_string)
+            if ( passwordlVerificada){
+                localStorage.setItem("usuarioLogueado", info_string )
+            }
+            infoVerificada("./reseñas.html")
         } else {
-            console.log("Datos Incorrectos")
+            window.alert("la contraseña esta incorrecta")
+            console.log("datos incorrectos")
         }
+
     }
+
  }
 
-
- function redirectTo(path) {
+ function infoVerificada (path) {
     const a = document.createElement("a")
     a.href = path
     a.click()
- }
+}
 
- login_form.addEventListener("submit",  inicio_sesion )
+
+
+
+
+
+
+
+
+ login_form.addEventListener('submit', info_verificada)

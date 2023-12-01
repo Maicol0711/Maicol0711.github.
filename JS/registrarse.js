@@ -11,18 +11,18 @@ function info_guardada (event) {
     const password = formData.get('password')
 
     if (nombre && apellido && email && password) { 
-        const userData = { nombre, email, email, password ,login: false }
+        const userData = { nombre, apellido, email, password ,login: false }
         console.log(userData)
-        const str = JSON.stringify(userData)
-        console.log(str)
-        localStorage.setItem(email, str)
+        const info = JSON.stringify(userData)
+        console.log(info)
+        localStorage.setItem(email, info)
 
-        redirectTo("./iniciar_sesion.html")
+        infoVerificada("./iniciar_sesion.html")
     }
 }
 
 
-function redirectTo (path) {
+function infoVerificada (path) {
     const a = document.createElement("a")
     a.href = path
     a.click()
@@ -30,4 +30,3 @@ function redirectTo (path) {
 
 
 form.addEventListener('submit', info_guardada)
-
